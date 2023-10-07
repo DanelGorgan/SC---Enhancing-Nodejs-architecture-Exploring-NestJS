@@ -5,7 +5,7 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+  <p align="center">Generated using <a href="https://github.com/nestjs/nest" target="_blank">Nest</a>, a progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
@@ -24,7 +24,20 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+The implementation is striving to achieve the Clean Architecture (CA) according to Uncle Bob's system architecture proposal.
+
+![Nest Architecture](public/nestjsarchitecture-github-light.jpg)
+The application is divided into 4 main layers:
+
+1. **Entities** - These are represented by the Cat interface and define the essential attributes and structures of the core business logic entity.
+
+2. **Use Cases** - This is the Service layer where the actual implementation of business logic resides. It also provides an interface to the Repository, allowing for the decoupling and inversion of dependencies, following the principles of Dependency Inversion.
+
+3. **Interface Adapters** - This represents the Controller layer, responsible for receiving and processing input. It validates and transforms the data as needed, calls the relevant use cases (service methods), and returns responses to the calling components.
+
+4. **Frameworks and Drivers** - This layer holds external dependencies, such as in-memory databases and Swagger documentation. It also includes the CatsRepository class, which implements the database handling functionality.
+
+Through the utilization of NestJS boilerplate, our application is already separated into well-defined layers, similar to the CA approach. We further embrace the concept of Inversion of Control (IoC) and use Dependency Injection (DI) to delegate control to the framework. This empowers us to dynamically determine and specify which class dependencies to use during runtime, resulting in loose coupling, improved reusability, and effortless maintainability.
 
 ## Installation
 
@@ -48,26 +61,5 @@ $ yarn run start:prod
 ## Test
 
 ```bash
-# unit tests
 $ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
