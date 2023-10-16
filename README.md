@@ -22,6 +22,10 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+## Video Presentation
+
+[Enhancing Node.js Architecture: Exploring NestJS](https://www.youtube.com/watch?v=cu2t5zL9x7U&ab_channel=Ciklumofficial)
+
 ## Description
 
 The implementation is striving to achieve the Clean Architecture (CA) according to Uncle Bob's system architecture proposal.
